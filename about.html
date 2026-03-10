@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Maverick1000</title>
+  <meta name="description" content="Meet the visionaries behind Maverick1000: Yanik Silver, founder and cosmic catalyst, and Sophia Umanski, the Maverick Mom leading the community forward.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --deep: #0a0a0a;
+      --surface: #111111;
+      --card: #161616;
+      --border: #222222;
+      --emerald: #1a472a;
+      --emerald-light: #2d5a3d;
+      --emerald-glow: #3a7a52;
+      --gold: #c9a961;
+      --gold-light: #d4bc7e;
+      --gold-dim: #8a7441;
+      --cream: #f0ebe1;
+      --text: #e8e4dc;
+      --text-dim: #9a9590;
+      --white: #ffffff;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--deep);
+      color: var(--text);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .bebas { font-family: 'Bebas Neue', sans-serif; }
+    .cormorant { font-family: 'Cormorant Garamond', serif; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: var(--gold); text-decoration: none; transition: color 0.3s; }
+    a:hover { color: var(--gold-light); }
+
+    /* Navigation */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 1.5rem 2rem;
+      background: transparent;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav.scrolled {
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(20px);
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      height: 40px;
+      opacity: 0.9;
+      transition: opacity 0.3s;
+    }
+    .nav-logo:hover { opacity: 1; }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .nav-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-apply {
+      background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+      padding: 0.6rem 1.4rem !important;
+      border-radius: 4px;
+      color: var(--gold) !important;
+      font-weight: 600 !important;
+      letter-spacing: 0.15em !important;
+      border: 1px solid var(--emerald-glow);
+      transition: all 0.3s;
+    }
+    .nav-apply:hover {
+      background: linear-gradient(135deg, var(--emerald-light), var(--emerald-glow));
+      transform: translateY(-1px);
+    }
+    .nav-mobile-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 5px;
+    }
+    .nav-mobile-toggle span {
+      width: 24px;
+      height: 2px;
+      background: var(--text-dim);
+      transition: all 0.3s;
+    }
+
+    /* Hero */
+    .about-hero {
+      position: relative;
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 2rem 80px;
+      overflow: hidden;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/yanik-sophia-presenting.jpg') center center / cover no-repeat;
+      opacity: 0.2;
+    }
+    .about-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,10,10,0.6) 0%, var(--deep) 100%);
+    }
+    .about-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+    }
+    .about-hero-content h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3rem, 7vw, 5rem);
+      letter-spacing: 0.08em;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+    .about-hero-content h1 span { color: var(--gold); }
+    .about-hero-content p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--text-dim);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Sections */
+    .section {
+      padding: 100px 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold-dim);
+      margin: 0 auto 2rem;
+    }
+
+    /* Founder Profiles */
+    .founder-section {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: start;
+      margin-bottom: 100px;
+    }
+    .founder-section.reverse {
+      grid-template-columns: 1.4fr 1fr;
+    }
+    .founder-section.reverse .founder-image {
+      order: 2;
+    }
+    .founder-section.reverse .founder-text {
+      order: 1;
+    }
+    .founder-image {
+      position: relative;
+    }
+    .founder-image img {
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .founder-image .image-accent {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--gold-dim);
+      border-radius: 8px;
+      top: 12px;
+      left: 12px;
+      z-index: -1;
+    }
+    .founder-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .founder-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      letter-spacing: 0.06em;
+      color: var(--cream);
+      line-height: 1.1;
+      margin-bottom: 0.4rem;
+    }
+    .founder-role {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-style: italic;
+      color: var(--gold-dim);
+      margin-bottom: 2rem;
+    }
+    .founder-text p {
+      color: var(--text);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 1.4rem;
+    }
+    .founder-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--gold-light);
+      padding: 1.5rem 0 1.5rem 1.5rem;
+      border-left: 2px solid var(--gold-dim);
+      margin: 2rem 0;
+      line-height: 1.6;
+    }
+
+    /* Vision Section */
+    .vision-section {
+      background: var(--surface);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      padding: 60px 50px;
+      text-align: center;
+      margin: 60px 0;
+    }
+    .vision-section h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.08em;
+      color: var(--cream);
+      margin-bottom: 1.5rem;
+    }
+    .vision-section h2 span { color: var(--gold); }
+    .vision-section p {
+      font-size: 1rem;
+      line-height: 1.9;
+      color: var(--text);
+      max-width: 750px;
+      margin: 0 auto 1.2rem;
+    }
+
+    /* Stats Row */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin: 60px 0;
+    }
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    .stat-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.4rem;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .stat-label {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* Joint Photo */
+    .joint-photo {
+      margin: 60px 0;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .joint-photo img {
+      width: 100%;
+      display: block;
+    }
+    .joint-photo-caption {
+      background: var(--card);
+      padding: 16px 24px;
+      font-size: 0.8rem;
+      color: var(--text-dim);
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* Featured In */
+    .featured-in {
+      text-align: center;
+      padding: 60px 0;
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+    }
+    .featured-in h3 {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 1.5rem;
+    }
+    .featured-logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+      opacity: 0.5;
+    }
+    .featured-logos span {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+    }
+
+    /* CTA */
+    .about-cta {
+      text-align: center;
+      padding: 80px 2rem;
+      background: linear-gradient(180deg, var(--deep) 0%, var(--surface) 50%, var(--deep) 100%);
+    }
+    .about-cta h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      letter-spacing: 0.08em;
+      color: var(--cream);
+      margin-bottom: 1rem;
+    }
+    .about-cta p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: var(--text-dim);
+      margin-bottom: 2rem;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+      color: var(--gold);
+      padding: 1rem 2.5rem;
+      border-radius: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid var(--emerald-glow);
+      transition: all 0.3s;
+    }
+    .cta-btn:hover {
+      background: linear-gradient(135deg, var(--emerald-light), var(--emerald-glow));
+      transform: translateY(-2px);
+      color: var(--gold-light);
+    }
+
+    /* Footer */
+    .footer {
+      padding: 40px 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+    .footer p {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      letter-spacing: 0.05em;
+    }
+
+    /* Reveal animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .founder-section,
+      .founder-section.reverse {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+      .founder-section.reverse .founder-image,
+      .founder-section.reverse .founder-text {
+        order: unset;
+      }
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .vision-section {
+        padding: 40px 24px;
+      }
+      .nav-links { display: none; }
+      .nav-mobile-toggle { display: flex; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 10, 0.98);
+        padding: 1.5rem 2rem;
+        border-bottom: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html"><img src="images/maverick-logo.png" alt="Maverick1000" class="nav-logo"></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#manifesto">Manifesto</a></li>
+        <li><a href="index.html#pillars">Pillars</a></li>
+        <li><a href="index.html#experiences">Experiences</a></li>
+        <li><a href="index.html#apply" class="nav-apply">Apply Now</a></li>
+      </ul>
+      <div class="nav-mobile-toggle" id="navToggle" onclick="document.getElementById('navLinks').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="about-hero-content">
+      <h1>The <span>Visionaries</span> Behind Maverick</h1>
+      <p>Two forces united by a single belief: business can be the greatest lever for creating a better world.</p>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <div class="section">
+
+    <!-- Yanik Silver -->
+    <div class="founder-section reveal">
+      <div class="founder-image">
+        <img src="images/yanik-silver-portrait.jpg" alt="Yanik Silver, Founder of Maverick1000">
+        <div class="image-accent"></div>
+      </div>
+      <div class="founder-text">
+        <div class="founder-tag">Founder &amp; Cosmic Catalyst</div>
+        <h2 class="founder-name">Yanik Silver</h2>
+        <div class="founder-role">The mind that reimagined what a business community could be</div>
+
+        <p>Yanik Silver grew up watching his father build a medical equipment business after immigrating to the United States from Russia with just $256 in his pocket. That entrepreneurial spirit took root early. By age 14, Yanik was telemarketing for the family business. By 16, he was cold calling on doctors. And by his early twenties, he had discovered the power of direct response marketing and was building multiple ventures from scratch.</p>
+
+        <p>In 2000, Yanik woke up at 3 AM with an idea that would become Instant Sales Letters, his first million dollar product. That success opened the door to a career as one of the most respected digital marketing pioneers of the early internet era, building eight different product lines that each crossed the million dollar mark. He went on to create the Underground Online Seminar, a legendary annual gathering of 500+ entrepreneurs that ran for nearly a decade.</p>
+
+        <div class="founder-quote">
+          "I see my lifetime goal as connecting visionary leaders and game changers to catalyze innovative business models and new ideas for solving 100 of the world's most impactful issues by the year 2100."
+        </div>
+
+        <p>But making money was never the full picture for Yanik. He became increasingly drawn to the idea that entrepreneurship could be a force for transformation, not just transaction. That conviction led him to create Maverick1000, a global invitation only network of industry transforming entrepreneurs who connect their head (business sense), heart (impact in the world), and higher purpose.</p>
+
+        <p>Through Maverick, Yanik has forged deep relationships with icons like Richard Branson, Sara Blakely, Tony Hawk, and dozens of other world class leaders. Maverick members gather annually at Branson's private Necker Island and have collectively raised over $3,000,000 for charitable initiatives spanning Haitian village development, Amazon rainforest protection, and veteran entrepreneurship programs.</p>
+
+        <p>Yanik is the author of several bestselling books including <em>Evolved Enterprise</em>, <em>34 Rules for Maverick Entrepreneurs</em>, and <em>The Cosmic Journal</em>. His work has been featured in Forbes, The New York Times, The Washington Post, Inc., Bloomberg, CNBC, WIRED, and TechCrunch. He lives in Potomac, Maryland with his wife Missy and their two children, Zack and Zoe.</p>
+      </div>
+    </div>
+
+    <!-- Joint Photo -->
+    <div class="joint-photo reveal">
+      <img src="images/yanik-sophia-presenting.jpg" alt="Yanik Silver and Sophia Umanski presenting together at a Maverick event">
+      <div class="joint-photo-caption">Yanik and Sophia leading a Maverick gathering together</div>
+    </div>
+
+    <!-- Sophia Umanski -->
+    <div class="founder-section reverse reveal">
+      <div class="founder-text">
+        <div class="founder-tag">The Maverick Mom &amp; Co-Owner</div>
+        <h2 class="founder-name">Sophia Umanski</h2>
+        <div class="founder-role">The heart and soul carrying Maverick into its next chapter</div>
+
+        <p>Every great community needs someone who makes it feel like home. For Maverick1000, that person is Sophia Umanski. Known affectionately as the "Maverick Mom," Sophia has spent more than a decade shaping the experience, energy, and emotional fabric of the Maverick community. She is not just a leader of the organization; she is its living, breathing heartbeat.</p>
+
+        <p>A serial entrepreneur and 10 year events industry veteran, Sophia brings a rare combination of operational excellence and deep human intuition to everything she touches. As Chief Experience Architect and President of Maverick NEXT, she oversees member experience from end to end, curating every detail of the gatherings, retreats, and once in a lifetime adventures that define what it means to be a Maverick.</p>
+
+        <div class="founder-quote">
+          "Changing the way business is played, lighting suns, and creating magical sandboxes."
+        </div>
+
+        <p>Sophia is the architect behind what Maverick calls "Astonishment Architecture," a proprietary approach to designing experiences that go beyond networking into genuine transformation. From orchestrating Dangerous Dinners and zero gravity flights to arranging for members to spend the night in a real Mayan village during a winter solstice celebration, Sophia approaches every experience with the same philosophy: create something that opens hearts and shifts perspectives.</p>
+
+        <p>As co-owner of Maverick1000, Sophia is leading the community forward into its next evolution. Her vision centers on helping each member unlock their full potential for impact while building thriving businesses that become forces for good. Under her leadership, Maverick NEXT has become the premier invitation only network for the next generation of entrepreneurial leaders.</p>
+
+        <p>Sophia graduated from the University of Maryland College Park and is based in Miami. Her partnership with Yanik Silver is the foundation upon which Maverick was built and continues to grow. Where Yanik is the cosmic catalyst of vision, Sophia is the grounding force that turns vision into lived experience. Together, they have created something that thousands of entrepreneurs call the most meaningful community of their lives.</p>
+      </div>
+      <div class="founder-image">
+        <img src="images/sophia-umanski-portrait.jpg" alt="Sophia Umanski, Co-Owner of Maverick1000">
+        <div class="image-accent"></div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-row reveal">
+      <div class="stat-card">
+        <div class="stat-number">$3M+</div>
+        <div class="stat-label">Raised for Charity</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Years of Community</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">1000+</div>
+        <div class="stat-label">Visionary Members</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">30+</div>
+        <div class="stat-label">Iconic Luminaries</div>
+      </div>
+    </div>
+
+    <!-- Vision Section -->
+    <div class="vision-section reveal">
+      <h2>Our <span>Shared Vision</span></h2>
+      <p>Maverick1000 exists at the intersection of three interconnected forces: growth, impact, and happiness. We believe that when head, heart, and higher purpose are aligned, business becomes one of the most powerful tools for shaping the world we want to live in.</p>
+      <p>Our members are not just entrepreneurs. They are lighthouses in their industries, sun lighters who ignite 1,000 more suns. Together, we are building a legacy that will catalyze solutions to 100 of the world's most pressing challenges by the year 2100.</p>
+      <p>This is not a networking group. This is a family of visionaries who show up fully, challenge each other to grow, and use their collective power to leave the world unmistakably better than they found it.</p>
+    </div>
+
+    <!-- Featured In -->
+    <div class="featured-in reveal">
+      <h3>As Featured In</h3>
+      <div class="featured-logos">
+        <span>Forbes</span>
+        <span>Inc.</span>
+        <span>Bloomberg</span>
+        <span>NY Times</span>
+        <span>CNBC</span>
+        <span>WIRED</span>
+        <span>TechCrunch</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- CTA -->
+  <section class="about-cta">
+    <h2>Ready to Join the Maverick Family?</h2>
+    <p>Applications are open for visionary entrepreneurs who believe business can be a force for good.</p>
+    <a href="index.html#apply" class="cta-btn">Apply Now</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Maverick1000. All rights reserved. | <a href="index.html">Home</a> | <a href="about.html">About</a></p>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
