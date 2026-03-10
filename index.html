@@ -488,11 +488,45 @@
     }
 
     .pillar-icon svg {
-      width: 48px;
-      height: 48px;
+      width: 80px;
+      height: 80px;
       stroke: var(--gold);
       fill: none;
-      stroke-width: 1.5;
+      stroke-width: 1;
+    }
+
+    .testimonial-author-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--emerald), var(--emerald-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 0.9rem;
+      color: var(--gold);
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+      overflow: hidden;
+      border: 1.5px solid var(--border);
+    }
+
+    .testimonial-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .testimonial-author-info {
+      display: flex;
+      flex-direction: column;
     }
 
     .pillar-name {
@@ -1076,7 +1110,20 @@
       <div class="pillars-grid">
         <div class="pillar-card reveal">
           <div class="pillar-icon">
-            <svg viewBox="0 0 48 48"><path d="M24 4l4.5 9.2L38 15l-7 6.8 1.6 9.6L24 27l-8.6 4.4L17 21.8 10 15l9.5-1.8z"/></svg>
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <!-- Hexagonal frame with hand-drawn feel -->
+              <path d="M40 5 L70 20 L72 55 L42 75 L12 58 L10 23 Z" stroke-dasharray="3,2" opacity="0.3"/>
+              <!-- Ascending stairs/growth path -->
+              <path d="M22 58 L22 48 L32 48 L32 38 L42 38 L42 28 L52 28 L52 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Arrow tip -->
+              <path d="M47 22 L52 16 L57 22" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- Sparkle dots -->
+              <circle cx="60" cy="14" r="1.5" fill="var(--gold)" stroke="none"/>
+              <circle cx="64" cy="22" r="1" fill="var(--gold)" stroke="none"/>
+              <circle cx="18" cy="62" r="1" fill="var(--gold)" stroke="none" opacity="0.5"/>
+              <!-- Small spiral -->
+              <path d="M26 20 C26 17 30 17 30 20 C30 24 24 24 24 19" stroke-width="1" stroke-linecap="round" opacity="0.4"/>
+            </svg>
           </div>
           <div class="pillar-name">Growth</div>
           <p class="pillar-desc">
@@ -1088,7 +1135,23 @@
 
         <div class="pillar-card reveal">
           <div class="pillar-icon">
-            <svg viewBox="0 0 48 48"><path d="M24 44c11-8 18-15 18-22a10 10 0 00-18-6 10 10 0 00-18 6c0 7 7 14 18 22z"/></svg>
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <!-- Hexagonal frame -->
+              <path d="M40 6 L69 21 L71 56 L41 74 L11 57 L9 22 Z" stroke-dasharray="3,2" opacity="0.3"/>
+              <!-- Central globe/circle -->
+              <circle cx="40" cy="38" r="12" stroke-width="1.5"/>
+              <path d="M28 38 C33 32 47 32 52 38" stroke-width="1" opacity="0.5"/>
+              <path d="M28 38 C33 44 47 44 52 38" stroke-width="1" opacity="0.5"/>
+              <line x1="40" y1="26" x2="40" y2="50" stroke-width="1" opacity="0.4"/>
+              <!-- Ripple rings -->
+              <circle cx="40" cy="38" r="18" stroke-dasharray="4,3" opacity="0.25"/>
+              <circle cx="40" cy="38" r="24" stroke-dasharray="3,4" opacity="0.15"/>
+              <!-- Hands reaching up -->
+              <path d="M30 60 C30 54 34 52 36 56" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M50 60 C50 54 46 52 44 56" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Heart -->
+              <path d="M38 18 C36 15 32 16 33 19 C33 21 38 24 38 24 C38 24 43 21 43 19 C44 16 40 15 38 18" stroke-width="1" fill="var(--gold)" opacity="0.3"/>
+            </svg>
           </div>
           <div class="pillar-name">Impact</div>
           <p class="pillar-desc">
@@ -1100,7 +1163,29 @@
 
         <div class="pillar-card reveal">
           <div class="pillar-icon">
-            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/><path d="M16 28c0 0 3 5 8 5s8-5 8-5M18 18h0M30 18h0"/></svg>
+            <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+              <!-- Hexagonal frame -->
+              <path d="M40 5 L70 21 L72 55 L42 74 L12 57 L10 22 Z" stroke-dasharray="3,2" opacity="0.3"/>
+              <!-- Sun/starburst -->
+              <circle cx="40" cy="38" r="10" stroke-width="1.5"/>
+              <!-- Rays with hand-drawn wobble -->
+              <line x1="40" y1="24" x2="40" y2="16" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="40" y1="52" x2="40" y2="60" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="26" y1="38" x2="18" y2="38" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="54" y1="38" x2="62" y2="38" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="31" y1="29" x2="25" y2="23" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="49" y1="47" x2="55" y2="53" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="49" y1="29" x2="55" y2="23" stroke-width="1.5" stroke-linecap="round"/>
+              <line x1="31" y1="47" x2="25" y2="53" stroke-width="1.5" stroke-linecap="round"/>
+              <!-- Smile inside sun -->
+              <path d="M35 40 C37 44 43 44 45 40" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="36" cy="36" r="1" fill="var(--gold)" stroke="none"/>
+              <circle cx="44" cy="36" r="1" fill="var(--gold)" stroke="none"/>
+              <!-- Small sparkles -->
+              <circle cx="22" cy="16" r="1" fill="var(--gold)" stroke="none" opacity="0.4"/>
+              <circle cx="60" cy="16" r="1.2" fill="var(--gold)" stroke="none" opacity="0.3"/>
+              <circle cx="16" cy="50" r="0.8" fill="var(--gold)" stroke="none" opacity="0.3"/>
+            </svg>
           </div>
           <div class="pillar-name">Happiness</div>
           <p class="pillar-desc">
@@ -1240,7 +1325,7 @@
       <!-- Featured Testimonial -->
       <div class="featured-testimonial reveal">
         <div class="featured-quote">
-          Since I joined I have earned over $1,000,000 in extra revenue, all due to connections and recommendations. I can almost guarantee that you will have made your money back and much more within the first year of joining. Hands down, not only my favorite group that I am a part of but by far the most valuable.
+          Since joining, I have earned over $1,000,000 in extra revenue, all from connections and recommendations made through the group. I can almost guarantee you will make your money back and much more within the first year. Hands down my favorite group and by far the most valuable.
         </div>
         <div class="featured-author">Aaron Lilly</div>
         <div class="featured-role">Maverick Member Since 2011</div>
@@ -1250,74 +1335,119 @@
       <div class="testimonial-grid">
         <div class="testimonial-card reveal">
           <div class="testimonial-quote">
-            I ran into a real tight spot last year when our main publishing company's author left. The deep relationships I had with Maverick members saved the day. I called up a fellow Maverick and we ended up netting $210,000 with just 2 emails.
+            Our main publishing company's author left and I was in a real tight spot. The deep relationships I had with Maverick members saved the day. One phone call to a fellow Maverick and we ended up netting $210,000 with just 2 emails.
           </div>
-          <div class="testimonial-author">Justin Tupper</div>
-          <div class="testimonial-role">RevolutionGolf.com</div>
+          <div class="testimonial-author-row">
+            <div class="testimonial-avatar">JT</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author">Justin Tupper</div>
+              <div class="testimonial-role">RevolutionGolf.com</div>
+            </div>
+          </div>
         </div>
 
         <div class="testimonial-card reveal">
           <div class="testimonial-quote">
-            The best ideas that you get come from hearing about ideas in completely different industries. The energy of being around other entrepreneurs who are fully engaged is really what makes the Maverick community special.
+            The best ideas come from hearing about ideas in completely different industries. The energy of being around entrepreneurs who are fully engaged is what makes this community unlike anything else I have experienced.
           </div>
-          <div class="testimonial-author">John Ratliff</div>
-          <div class="testimonial-role">Align 5 / Apple Tree Answers</div>
+          <div class="testimonial-author-row">
+            <div class="testimonial-avatar">JR</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author">John Ratliff</div>
+              <div class="testimonial-role">Founder, Align 5</div>
+            </div>
+          </div>
         </div>
 
         <div class="testimonial-card reveal">
           <div class="testimonial-quote">
-            I've done platinum in Fiji with Tony Robbins and some incredible stuff, but this really just takes life to a whole nother level. The combination of the people, the experiences, and the impact component is unlike anything else.
+            I have done platinum in Fiji with Tony Robbins and some incredible stuff, but this really takes life to a whole other level. Everything I expected, it was 10 times better. The people and experiences have blown me away.
           </div>
-          <div class="testimonial-author">Scott Picken</div>
-          <div class="testimonial-role">Maverick Member</div>
+          <div class="testimonial-author-row">
+            <div class="testimonial-avatar">SP</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author">Scott Picken</div>
+              <div class="testimonial-role">Necker Island Attendee</div>
+            </div>
+          </div>
         </div>
 
         <div class="testimonial-card reveal">
           <div class="testimonial-quote">
-            Mavericks are more than a club, more than a network. They are a group of caring, creative and philanthropic minded people that will no doubt leave a footprint in history as an example of what can happen when great minds and good souls unite.
+            Quite literally no single person or group has shifted my life and the course of my life more than meeting the Mavericks. My number one bucket list item was to find a group of friends that feel like family. Through the Mavericks I got to check that one off.
           </div>
-          <div class="testimonial-author">Jim Spano</div>
-          <div class="testimonial-role">Real Estate & Solar Development</div>
+          <div class="testimonial-author-row">
+            <div class="testimonial-avatar">AJ</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author">Aydika James</div>
+              <div class="testimonial-role">Maverick Member</div>
+            </div>
+          </div>
         </div>
 
         <div class="testimonial-card reveal">
           <div class="testimonial-quote">
-            The bonds formed through Maverick are deeper and more authentic than anything another networking group or mastermind can give you. These events were not only EPIC, once in a lifetime trips, but also created more authentic relationships through sharing unique experiences.
+            You can step into this environment and be your authentic self with people you may have known for only hours, yet feel like you have known for lifetimes. It is the rarest thing. These are heart centered entrepreneurs who truly care.
           </div>
-          <div class="testimonial-author">William Lee</div>
-          <div class="testimonial-role">Maverick Member</div>
+          <div class="testimonial-author-row">
+            <div class="testimonial-avatar">KB</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author">Kyle Brown</div>
+              <div class="testimonial-role">Necker Island Attendee</div>
+            </div>
+          </div>
         </div>
 
         <div class="testimonial-card reveal">
           <div class="testimonial-quote">
-            From the moment you get here you're just seeing all of the scenery and how everything flows together. You realize that you are part of something much bigger than yourself. The connection on a business level, emotional level, and intellectual level is unmatched.
+            Bar none, this has been the best investment I have ever made. It means the world to my company. For anybody considering it, I 100% recommend it. It is phenomenal.
           </div>
-          <div class="testimonial-author">Steve Young</div>
-          <div class="testimonial-role">Multi Event Maverick Attendee</div>
+          <div class="testimonial-author-row">
+            <div class="testimonial-avatar">JK</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author">Jason Katzenback</div>
+              <div class="testimonial-role">Maverick Member</div>
+            </div>
+          </div>
         </div>
 
         <div class="testimonial-card reveal">
           <div class="testimonial-quote">
-            Being a member has been life changing. It has kept me engaged and active and continuing to grow business wise and personal. It's an opportunity to sharpen the saw in my mind with people who truly understand the entrepreneurial journey.
+            Every moment of camp was mind blowing and heart opening. The community you have built is full of the most genuine, giving people I have ever met. Thank you for bringing me and Virgin Unite to Camp Maverick.
           </div>
-          <div class="testimonial-author">Tony Ricciardi</div>
-          <div class="testimonial-role">Co Founder, Listen Up Espanol</div>
+          <div class="testimonial-author-row">
+            <div class="testimonial-avatar">KH</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author">Katie Hunt-Morr</div>
+              <div class="testimonial-role">Virgin Unite</div>
+            </div>
+          </div>
         </div>
 
         <div class="testimonial-card reveal">
           <div class="testimonial-quote">
-            Maverick has become a group of my closest friends and most trusted business advisors. Whether we are having fun, learning or helping others, I am always building genuine relationships where people give and ask for nothing in return.
+            Maverick is such an impactful part of my life that when people ask my kids what they want to be when they grow up, they say without hesitation, "Mavericks!" I would rather not feed my family than not pay Maverick dues.
           </div>
-          <div class="testimonial-author">Andrew Potoschnick</div>
-          <div class="testimonial-role">Maverick Member</div>
+          <div class="testimonial-author-row">
+            <div class="testimonial-avatar">SL</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author">Shelby Larson</div>
+              <div class="testimonial-role">Maverick Member</div>
+            </div>
+          </div>
         </div>
 
         <div class="testimonial-card reveal">
           <div class="testimonial-quote">
-            Just one of the Instant Leverage points made one of my clients another $300 to $400K in profit per month. These techniques can be used immediately. The caliber of the people and information shared is world class.
+            Just one of the Instant Leverage points made one of my clients another $300K to $400K in profit per month. These techniques can be used immediately. The caliber of the people and information shared is world class.
           </div>
-          <div class="testimonial-author">Mike Hill</div>
-          <div class="testimonial-role">CEO, MyMediaBuyer</div>
+          <div class="testimonial-author-row">
+            <div class="testimonial-avatar">MH</div>
+            <div class="testimonial-author-info">
+              <div class="testimonial-author">Mike Hill</div>
+              <div class="testimonial-role">CEO, MyMediaBuyer</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1346,37 +1476,51 @@
           <div class="icon-title">Founder, Virgin Group</div>
         </div>
         <div class="icon-card">
-          <div class="icon-avatar">SB</div>
+          <div class="icon-avatar">
+            <img src="images/sara-blakely.jpg" alt="Sara Blakely">
+          </div>
           <div class="icon-name">Sara Blakely</div>
           <div class="icon-title">Founder, Spanx</div>
         </div>
         <div class="icon-card">
-          <div class="icon-avatar">TH</div>
+          <div class="icon-avatar">
+            <img src="images/tony-hawk.jpg" alt="Tony Hawk">
+          </div>
           <div class="icon-name">Tony Hawk</div>
           <div class="icon-title">Legendary Skateboarder & Entrepreneur</div>
         </div>
         <div class="icon-card">
-          <div class="icon-avatar">BM</div>
+          <div class="icon-avatar">
+            <img src="images/blake-mycoskie.jpg" alt="Blake Mycoskie">
+          </div>
           <div class="icon-name">Blake Mycoskie</div>
           <div class="icon-title">Founder, TOMS Shoes</div>
         </div>
         <div class="icon-card">
-          <div class="icon-avatar">JW</div>
+          <div class="icon-avatar">
+            <img src="images/jeff-walker.jpg" alt="Jeff Walker">
+          </div>
           <div class="icon-name">Jeff Walker</div>
           <div class="icon-title">Product Launch Formula</div>
         </div>
         <div class="icon-card">
-          <div class="icon-avatar">CB</div>
+          <div class="icon-avatar">
+            <img src="images/craig-ballantyne.jpg" alt="Craig Ballantyne">
+          </div>
           <div class="icon-name">Craig Ballantyne</div>
           <div class="icon-title">Author & Business Coach</div>
         </div>
         <div class="icon-card">
-          <div class="icon-avatar">VL</div>
+          <div class="icon-avatar">
+            <img src="images/vishen-lakhiani.jpg" alt="Vishen Lakhiani">
+          </div>
           <div class="icon-name">Vishen Lakhiani</div>
           <div class="icon-title">Founder, Mindvalley</div>
         </div>
         <div class="icon-card">
-          <div class="icon-avatar">LR</div>
+          <div class="icon-avatar">
+            <img src="images/lena-requist.jpg" alt="Lena Requist">
+          </div>
           <div class="icon-name">Lena Requist</div>
           <div class="icon-title">President, ONTRAPORT</div>
         </div>
